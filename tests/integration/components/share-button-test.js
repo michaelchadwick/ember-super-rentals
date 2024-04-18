@@ -43,6 +43,14 @@ module('Integration | Component | share-button', function (hooks) {
     assert.strictEqual(this.tweetParam('url'), MOCK_URL.href);
   });
 
+  test('it supports passing @text', async function (assert) {
+    await render(
+      hbs`<ShareButton @text="Hello Twitter!">Tweet this!</ShareButton>`,
+    );
+
+    assert.strictEqual(this.tweetParam('text'), 'Hello Twitter!');
+  });
+
   test('it supports passing @hashtags', async function (assert) {
     await render(
       hbs`<ShareButton @hashtags="foo,bar,baz">Tweet this!</ShareButton>`,
