@@ -429,6 +429,15 @@ p {
 }
 
 /**
+ * Footer
+ */
+footer.menu {
+  height: 2em;
+  padding: 1em 0;
+  background-color: #7f2619;
+}
+
+/**
  * Utilities
  */
 
