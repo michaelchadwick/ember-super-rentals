@@ -1,7 +1,4 @@
-# super-rentals
-
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# EmberJS Super Rentals Tutorial Site
 
 ## Prerequisites
 
@@ -10,7 +7,7 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+* [Web browser](https://browser-update.org/browsers.html)
 
 ## Installation
 
@@ -20,18 +17,14 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `npm run start`
+* `npm start`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
 
-* `npm run test`
-* `npm run test:ember -- --server`
+* `ember test` - run tests once in terminal
+* `ember t -s` - run tests continuously in a browser
 
 ### Linting
 
@@ -40,17 +33,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `npm exec ember build` (development)
-* `npm run build` (production)
+* `ember build` (development)
+* `ember build --environment=production` (production)
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+Currently being built on [Netlify](https://mc-emberjs-super-rentals.netlify.app). Re-deploys on pushes to master.
