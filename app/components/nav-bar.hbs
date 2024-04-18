@@ -2,12 +2,15 @@
   <LinkTo @route="index" class="menu-index">
     <h1>SuperRentals</h1>
   </LinkTo>
+
   <div class="links">
-    <LinkTo @route="about" class="menu-about">
-      About
-    </LinkTo>
-    <LinkTo @route="contact" class="menu-contact">
-      Contact
-    </LinkTo>
+    {{#each this.links as |link|}}
+      <LinkTo @route={{link.route}}
+        class="menu-{{link.route}}"
+        target={{link.target}}
+      >
+        {{link.title}}
+      </LinkTo>
+    {{/each}}
   </div>
 </nav>
