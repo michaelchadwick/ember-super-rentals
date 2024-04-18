@@ -15,7 +15,6 @@ export default class MapComponent extends Component {
   }
 
   get token() {
-    console.log('ENV', ENV);
     return encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
   }
 }
