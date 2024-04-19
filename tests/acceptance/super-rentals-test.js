@@ -1,6 +1,7 @@
 import { module, test } from 'qunit';
 import { click, find, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'super-rentals/tests/helpers';
+import ENV from 'super-rentals/config/environment';
 
 module('Acceptance | super rentals', function (hooks) {
   setupApplicationTest(hooks);
@@ -84,13 +85,17 @@ module('Acceptance | super rentals', function (hooks) {
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-contact').hasText('Contact');
 
+    if (ENV.environment != 'production') {
+      assert.dom('nav a.menu-tests').hasText('Tests');
+    }
+
+    await click('nav a.menu-index');
+    assert.strictEqual(currentURL(), '/');
+
     await click('nav a.menu-about');
     assert.strictEqual(currentURL(), '/about');
 
     await click('nav a.menu-contact');
     assert.strictEqual(currentURL(), '/getting-in-touch');
-
-    await click('nav a.menu-index');
-    assert.strictEqual(currentURL(), '/');
   });
 });
