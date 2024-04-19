@@ -5,8 +5,12 @@ export default class RentalsFilterComponent extends Component {
     let { rentals, query } = this.args;
 
     if (query) {
-      rentals = rentals.filter((rental) =>
-        rental.title.toLowerCase().includes(query.toLowerCase()),
+      const q = query.toLowerCase();
+
+      rentals = rentals.filter(
+        (rental) =>
+          rental.title.toLowerCase().includes(q) ||
+          rental.city.toLowerCase().includes(q),
       );
     }
 
