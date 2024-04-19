@@ -92,16 +92,22 @@ module('Integration | Component | rentals', function (hooks) {
     assert.dom('.rentals').exists();
     assert.dom('.rentals input').exists();
 
+    // testing title
     await fillIn('.rentals input', 'Downtown');
-
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 1 });
     assert.dom('.rentals .results li').containsText('Downtown Charm');
 
     await fillIn('.rentals input', 'Mansion');
-
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 1 });
     assert.dom('.rentals .results li').containsText('Grand Old Mansion');
+
+    // testing city
+    await fillIn('.rentals input', 'Portland');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Downtown Charm');
   });
 });
