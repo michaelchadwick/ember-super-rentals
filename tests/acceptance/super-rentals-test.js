@@ -98,4 +98,11 @@ module('Acceptance | super rentals', function (hooks) {
     await click('nav a.menu-contact');
     assert.strictEqual(currentURL(), '/getting-in-touch');
   });
+
+  test('navigating using the footer', async function (assert) {
+    await visit('/');
+
+    assert.dom('footer').exists();
+    assert.dom('footer a.menu-source').hasText('Github Source');
+  });
 });

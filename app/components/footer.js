@@ -6,6 +6,7 @@ export default class FooterComponent extends Component {
 
     links.push({
       url: 'https://github.com/michaelchadwick/ember-super-rentals',
+      route: 'source',
       title: 'Github Source',
       target: '_blank',
     });
