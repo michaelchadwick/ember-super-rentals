@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: pnpm-lock.yaml
       - name: Install Dependencies
         run: npm ci
       - name: Lint
@@ -41,6 +42,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: pnpm-lock.yaml
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests
