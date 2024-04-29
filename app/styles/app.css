@@ -482,4 +482,9 @@ footer.menu {
   border: 0;
 }
 
+.side-by-side {
+  display: flex;
+  width: 100%;
+}
+
 /* stylelint-enable no-descending-specificity, media-feature-range-notation */

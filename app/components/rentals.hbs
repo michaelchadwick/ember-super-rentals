@@ -4,6 +4,22 @@
     <Input @value={{this.query}} class="light" />
   </label>
 
+  <label>
+      <strong>Selected Type:</strong> {{this.type}}
+  </label>
+
+  <fieldset class="side-by-side">
+    <RadioButton @name="rental-type" @value="" @groupValue={{this.type}} @changed={{this.typeChanged}}>
+      (any)
+    </RadioButton>
+    <RadioButton @name="rental-type" @value="standalone" @groupValue={{this.type}} @changed={{this.typeChanged}}>
+      Standalone
+    </RadioButton>
+    <RadioButton @name="rental-type" @value="community" @groupValue={{this.type}} @changed={{this.typeChanged}}>
+      Community
+    </RadioButton>
+  </fieldset>
+
   <ul class="results">
     <Rentals::Filter @rentals={{@rentals}} @query={{this.query}} as |results|>
       {{#each results as |rental|}}
