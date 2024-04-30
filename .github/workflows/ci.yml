@@ -18,13 +18,15 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9.0.6
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
       - name: Install Dependencies
         run: pnpm ci
       - name: Lint
@@ -36,13 +38,15 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9.0.6
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
       - name: Install Dependencies
         run: pnpm ci
       - name: Run Tests
