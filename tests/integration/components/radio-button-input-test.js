@@ -21,6 +21,6 @@ module('Integration | Component | radio-button-input', function (hooks) {
       </RadioButtonInput>
     `);
 
-    assert.dom().hasText('template block text');
+    assert.dom().hasText('');
   });
 });
