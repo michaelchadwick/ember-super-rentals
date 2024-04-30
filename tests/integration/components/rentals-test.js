@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'super-rentals/tests/helpers';
-import { render, fillIn } from '@ember/test-helpers';
+import { render, fillIn, triggerEvent } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | rentals', function (hooks) {
@@ -109,5 +109,48 @@ module('Integration | Component | rentals', function (hooks) {
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 1 });
     assert.dom('.rentals .results li').containsText('Downtown Charm');
+  });
+
+  test('it updates the results according to the type filter', async function (assert) {
+    await render(hbs`<Rentals @rentals={{this.rentals}} />`);
+
+    assert.dom('.rentals').exists();
+    assert.dom('.rentals fieldset#rental-type-rbl').exists();
+    assert
+      .dom('.rentals fieldset#rental-type-rbl input[value="standalone"]')
+      .exists();
+
+    await triggerEvent(
+      '.rentals fieldset#rental-type-rbl input[value="standalone"]',
+      'click',
+    );
+
+    assert
+      .dom('.rentals fieldset#rental-type-rbl input[value="standalone"]')
+      .isChecked();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Grand Old Mansion');
+
+    await triggerEvent(
+      '.rentals fieldset#rental-type-rbl input[value="community"]',
+      'click',
+    );
+
+    assert
+      .dom('.rentals fieldset#rental-type-rbl input[value="community"]')
+      .isChecked();
+    assert.dom('.rentals .results li').exists({ count: 2 });
+    assert.dom('.rentals .results').containsText('Urban Living');
+    assert.dom('.rentals .results').containsText('Downtown Charm');
+
+    await triggerEvent(
+      '.rentals fieldset#rental-type-rbl input:not([value])',
+      'click',
+    );
+
+    assert
+      .dom('.rentals fieldset#rental-type-rbl input:not([value])')
+      .isChecked();
+    assert.dom('.rentals .results li').exists({ count: 3 });
   });
 });

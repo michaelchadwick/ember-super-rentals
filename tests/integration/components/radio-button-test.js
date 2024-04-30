@@ -6,21 +6,21 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | radio-button', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it renders a RadioButtonInput', async function (assert) {
+    await render(hbs`<RadioButton
+      @name="foo"
+      @value="bar"
+      @groupValue={{this.type}}
+      @changed={{this.typeChanged}}
+    >
+      Standalone
+    </RadioButton>`);
 
-    await render(hbs`<RadioButton />`);
-
-    assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <RadioButton>
-        template block text
-      </RadioButton>
-    `);
-
-    assert.dom().hasText('template block text');
+    assert
+      .dom('input')
+      .exists()
+      .hasAttribute('type', 'radio')
+      .hasAttribute('name', 'foo')
+      .hasAttribute('value', 'bar');
   });
 });
