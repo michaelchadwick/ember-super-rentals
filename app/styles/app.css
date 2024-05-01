@@ -153,6 +153,10 @@ p {
   display: block;
 }
 
+.rentals input::placeholder {
+  color: #adadad;
+}
+
 .rentals input[type="radio"] {
   display: inline;
   margin: 0 5px 0 10px;
