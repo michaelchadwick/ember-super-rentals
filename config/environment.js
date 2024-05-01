@@ -21,7 +21,6 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
-    console.log('Oh, boy! This tutorial is running in development! Go nuts!');
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -30,9 +29,6 @@ module.exports = function (environment) {
   }
 
   if (environment === 'test') {
-    console.log(
-      'Oh, boy! This tutorial is running in test! Hope everything passes.',
-    );
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -45,13 +41,8 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    console.log(
-      "Oh, boy! This tutorial is running in production! Don't do anything critical here.",
-    );
     // here you can enable a production-specific feature
   }
-
-  console.log("Hmm. I don't know what environment this is running in...");
 
   ENV.MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
 
