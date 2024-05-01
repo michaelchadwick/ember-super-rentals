@@ -7,8 +7,6 @@ export default class RentalsFilterComponent extends Component {
     const q = query.toLowerCase();
     const t = type.toLowerCase();
 
-    console.log(`query: ${q}, type: ${t}`);
-
     if (type) {
       rentals = rentals.filter(
         (rental) =>
