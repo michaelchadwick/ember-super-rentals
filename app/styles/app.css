@@ -123,15 +123,16 @@ p {
 
 .rentals label span {
   font-size: 140%;
-  margin: 50px auto 20px;
-  display: block;
+  margin: 10px auto;
+  display: inline-block;
   text-align: center;
   font-style: italic;
+  width: 100%;
 }
 
 .rentals fieldset.side-by-side {
   /* border: none; */
-  margin: 20px auto;
+  margin: 10px auto 20px;
   padding: 10px;
   text-align: center;
   width: 500px;
@@ -146,7 +147,7 @@ p {
   padding: 11px;
   font-size: 18px;
   width: 500px;
-  margin: 20px auto 50px;
+  margin: 10px auto;
   background-color: rgb(255 255 255 / 75%);
   border: solid 1px lightgray;
   display: block;
@@ -198,7 +199,7 @@ p {
 
 .results li {
   list-style: none;
-  padding: 10px 15px;
+  padding: 5px 15px;
 }
 
 .menu .results li:hover {
@@ -218,7 +219,7 @@ p {
  */
 
 .jumbo {
-  padding: 50px;
+  padding: 35px 50px;
   background: #f6f6f6;
 }
 
@@ -248,9 +249,9 @@ p {
  */
 
 .rental {
-  margin-top: 15px;
-  background-color: #f6f6f6;
-  padding: 20px 25px;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 10px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,7 +259,7 @@ p {
 }
 
 .rental:hover {
-  background-color: #f3f3f3;
+  background-color: #e5e5e5;
 }
 
 .rental img {
