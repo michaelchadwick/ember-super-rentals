@@ -21,6 +21,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
+    console.log('Oh, boy! This tutorial is running in development!');
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -29,6 +30,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'test') {
+    console.log('Oh, boy! This tutorial is running in test!');
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -41,6 +43,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    console.log('Oh, boy! This tutorial is running in production!');
     // here you can enable a production-specific feature
   }
 
