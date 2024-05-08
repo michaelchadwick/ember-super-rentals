@@ -21,8 +21,7 @@ module('Integration | Component | rentals', function (hooks) {
           category: 'Estate',
           type: 'Standalone',
           bedrooms: 15,
-          image:
-            'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
+          image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
           description:
             'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.',
         },
@@ -73,17 +72,11 @@ module('Integration | Component | rentals', function (hooks) {
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 3 });
 
-    assert
-      .dom('.rentals .results li:nth-of-type(1)')
-      .containsText('Grand Old Mansion');
+    assert.dom('.rentals .results li:nth-of-type(1)').containsText('Grand Old Mansion');
 
-    assert
-      .dom('.rentals .results li:nth-of-type(2)')
-      .containsText('Urban Living');
+    assert.dom('.rentals .results li:nth-of-type(2)').containsText('Urban Living');
 
-    assert
-      .dom('.rentals .results li:nth-of-type(3)')
-      .containsText('Downtown Charm');
+    assert.dom('.rentals .results li:nth-of-type(3)').containsText('Downtown Charm');
   });
 
   test('it updates the results according to the search query', async function (assert) {
@@ -116,41 +109,24 @@ module('Integration | Component | rentals', function (hooks) {
 
     assert.dom('.rentals').exists();
     assert.dom('.rentals fieldset#rental-type-rbl').exists();
-    assert
-      .dom('.rentals fieldset#rental-type-rbl input[value="standalone"]')
-      .exists();
+    assert.dom('.rentals fieldset#rental-type-rbl input[value="standalone"]').exists();
 
-    await triggerEvent(
-      '.rentals fieldset#rental-type-rbl input[value="standalone"]',
-      'click',
-    );
+    await triggerEvent('.rentals fieldset#rental-type-rbl input[value="standalone"]', 'click');
 
-    assert
-      .dom('.rentals fieldset#rental-type-rbl input[value="standalone"]')
-      .isChecked();
+    assert.dom('.rentals fieldset#rental-type-rbl input[value="standalone"]').isChecked();
     assert.dom('.rentals .results li').exists({ count: 1 });
     assert.dom('.rentals .results li').containsText('Grand Old Mansion');
 
-    await triggerEvent(
-      '.rentals fieldset#rental-type-rbl input[value="community"]',
-      'click',
-    );
+    await triggerEvent('.rentals fieldset#rental-type-rbl input[value="community"]', 'click');
 
-    assert
-      .dom('.rentals fieldset#rental-type-rbl input[value="community"]')
-      .isChecked();
+    assert.dom('.rentals fieldset#rental-type-rbl input[value="community"]').isChecked();
     assert.dom('.rentals .results li').exists({ count: 2 });
     assert.dom('.rentals .results').containsText('Urban Living');
     assert.dom('.rentals .results').containsText('Downtown Charm');
 
-    await triggerEvent(
-      '.rentals fieldset#rental-type-rbl input:not([value])',
-      'click',
-    );
+    await triggerEvent('.rentals fieldset#rental-type-rbl input:not([value])', 'click');
 
-    assert
-      .dom('.rentals fieldset#rental-type-rbl input:not([value])')
-      .isChecked();
+    assert.dom('.rentals fieldset#rental-type-rbl input:not([value])').isChecked();
     assert.dom('.rentals .results li').exists({ count: 3 });
   });
 });

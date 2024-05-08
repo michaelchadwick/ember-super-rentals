@@ -21,15 +21,11 @@ export default class ApplicationRoute extends Route {
 
     switch (env) {
       case 'development': {
-        console.log(
-          'ENV: Oh, boy! This tutorial is running in development! Go nuts!',
-        );
+        console.log('ENV: Oh, boy! This tutorial is running in development! Go nuts!');
         break;
       }
       case 'test': {
-        console.log(
-          'ENV: Oh, boy! This tutorial is running in test! Hope everything passes.',
-        );
+        console.log('ENV: Oh, boy! This tutorial is running in test! Hope everything passes.');
         break;
       }
       case 'production': {
@@ -39,9 +35,7 @@ export default class ApplicationRoute extends Route {
         break;
       }
       default: {
-        console.log(
-          "ENV: Hmm. I don't know what environment this tutorial is running in...",
-        );
+        console.log("ENV: Hmm. I don't know what environment this tutorial is running in...");
         break;
       }
     }
