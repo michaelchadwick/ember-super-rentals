@@ -104,5 +104,6 @@ module('Acceptance | super rentals', function (hooks) {
 
     assert.dom('footer').exists();
     assert.dom('footer a.menu-source').hasText('Github Source');
+    assert.dom('footer a.menu-tutorial').hasText('Ember Tutorial');
   });
 });

@@ -11,6 +11,13 @@ export default class FooterComponent extends Component {
       target: '_blank',
     });
 
+    links.push({
+      url: 'https://guides.emberjs.com/release/tutorial',
+      route: 'tutorial',
+      title: 'Ember Tutorial',
+      target: '_blank',
+    });
+
     return links;
   }
 }
