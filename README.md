@@ -11,6 +11,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](https://cli.emberjs.com/release/)
     * [Ember CLI Dotenv](https://www.npmjs.com/package/ember-cli-dotenv)
     * [Ember CLI Head](https://www.npmjs.com/package/ember-cli-head)
+* [PNPM](https://pnpm.io/installation)
 * [Web browser](https://browser-update.org/browsers.html)
 * [MapBox Access Token](https://account.mapbox.com/access-tokens/)
 
@@ -18,13 +19,13 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd super-rentals`
-* `npm install`
+* `pnpm install`
 
 ## Running / Development
 
-* `npm start`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `pnpm start`
+* Visit your app at [http://localhost:4210](http://localhost:4210).
+* Visit your tests at [http://localhost:4210/tests](http://localhost:4210/tests).
 
 ### Running Tests
 
@@ -33,8 +34,8 @@ You will need the following things properly installed on your computer.
 
 ### Linting
 
-* `npm run lint`
-* `npm run lint:fix`
+* `pnpm lint`
+* `pnpm lint:fix`
 
 ### Building
 
