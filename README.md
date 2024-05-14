@@ -1,5 +1,7 @@
 # EmberJS Super Rentals Tutorial Site
 
+This is my version of the [EmberJS Super Rentals tutorial](https://guides.emberjs.com/release/tutorial). It has all the features of the original, plus some additional stuff to show that I *might* know what I'm doing in EmberJS.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
