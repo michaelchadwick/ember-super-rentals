@@ -1,8 +1,8 @@
 import { module, test } from 'qunit';
-import { setupRenderingTest } from 'super-rentals/tests/helpers';
+import { setupRenderingTest } from 'ember-super-rentals/tests/helpers';
 import { render, find } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
-import ENV from 'super-rentals/config/environment';
+import ENV from 'ember-super-rentals/config/environment';
 
 module('Integration | Component | map', function (hooks) {
   setupRenderingTest(hooks);

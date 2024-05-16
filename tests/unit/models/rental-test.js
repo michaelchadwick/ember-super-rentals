@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 
-import { setupTest } from 'super-rentals/tests/helpers';
+import { setupTest } from 'ember-super-rentals/tests/helpers';
 
 module('Unit | Model | rental', function (hooks) {
   setupTest(hooks);

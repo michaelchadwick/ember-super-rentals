@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import ENV from 'super-rentals/config/environment';
+import ENV from 'ember-super-rentals/config/environment';
 
 export default class FooterComponent extends Component {
   get links() {

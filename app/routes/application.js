@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import ENV from 'super-rentals/config/environment';
+import ENV from 'ember-super-rentals/config/environment';
 
 export default class ApplicationRoute extends Route {
   @service headData;
