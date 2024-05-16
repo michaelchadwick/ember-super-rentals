@@ -85,10 +85,6 @@ module('Acceptance | super rentals', function (hooks) {
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-contact').hasText('Contact');
 
-    if (ENV.environment != 'production') {
-      assert.dom('nav a.menu-tests').hasText('Tests');
-    }
-
     await click('nav a.menu-index');
     assert.strictEqual(currentURL(), '/');
 
@@ -103,7 +99,11 @@ module('Acceptance | super rentals', function (hooks) {
     await visit('/');
 
     assert.dom('footer').exists();
+    assert.dom('footer a.menu-author').hasText('Author');
     assert.dom('footer a.menu-source').hasText('Github Source');
     assert.dom('footer a.menu-tutorial').hasText('Ember Tutorial');
+    if (ENV.environment != 'production') {
+      assert.dom('footer a.menu-tests').hasText('[Tests]');
+    }
   });
 });

@@ -10,10 +10,10 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('about');
   this.route('contact', { path: '/getting-in-touch' });
+  this.route('rental', { path: '/rentals/:rental_id' });
+  this.route('tests', { path: '#' });
 
   if (ENV.environment != 'production') {
     this.route('tests', { path: '/tests?nocontainer' });
   }
-
-  this.route('rental', { path: '/rentals/:rental_id' });
 });
