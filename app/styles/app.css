@@ -121,6 +121,10 @@ p {
   bottom: 5px;
 }
 
+.menu .links a:hover {
+  text-decoration: underline;
+}
+
 .rentals label span {
   font-size: 140%;
   margin: 10px auto;
