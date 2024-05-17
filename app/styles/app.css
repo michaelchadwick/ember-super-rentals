@@ -1,4 +1,5 @@
 /* stylelint-disable no-descending-specificity, media-feature-range-notation */
+/* stylelint-disable selector-class-pattern */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic");
 
 /**
@@ -43,6 +44,10 @@ button {
 p {
   line-height: 1.5;
   margin-bottom: 15px;
+}
+
+svg.svg-inline--fa {
+  margin-right: 0.25em;
 }
 
 /**
